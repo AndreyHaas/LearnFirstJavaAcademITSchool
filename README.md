@@ -1,2 +1,1 @@
-# LearnFirstJavaAcademITSchool
-JavaLearn
+Repository of assignments for the course of Academic IT School
