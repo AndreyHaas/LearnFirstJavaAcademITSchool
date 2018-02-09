@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb6e1ba3-f528-4e24-8ede-798c6970c3cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lecture/CourseObjectives/AreaOfTriangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lecture/CourseObjectives/NextDay.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lecture/CourseObjectives/QuadraticEquation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Lecture/CourseObjectives/TheAge.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lecture/CourseObjectives/Apartments.java" afterPath="$PROJECT_DIR$/src/Lecture/CourseObjectives/Apartments.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lecture/Three/LeapYear.java" afterPath="$PROJECT_DIR$/src/Lecture/Three/LeapYear.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,11 +15,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Apartments.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Apartments.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lecture/CourseObjectives/Apartments.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
-              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+              <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeapYear.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Lecture/Three/LeapYear.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -72,7 +77,6 @@
         <option value="$PROJECT_DIR$/src/Lecture/Three/MaxMin.java" />
         <option value="$PROJECT_DIR$/src/Lecture/Three/MinMax.java" />
         <option value="$PROJECT_DIR$/src/Lecture/Three/WorkingWithThePassword.java" />
-        <option value="$PROJECT_DIR$/src/Lecture/Three/LeapYear.java" />
         <option value="$PROJECT_DIR$/src/Lecture/CourseObjectives/Аge.java" />
         <option value="$PROJECT_DIR$/src/Lecture/CourseObjectives/WorkingАge.java" />
         <option value="$PROJECT_DIR$/src/Lecture/CourseObjectives/AreaOfTriangle.java" />
@@ -80,6 +84,7 @@
         <option value="$PROJECT_DIR$/src/Lecture/CourseObjectives/QuadraticEquation.java" />
         <option value="$PROJECT_DIR$/src/Lecture/CourseObjectives/TheAge.java" />
         <option value="$PROJECT_DIR$/src/Lecture/CourseObjectives/Apartments.java" />
+        <option value="$PROJECT_DIR$/src/Lecture/Three/LeapYear.java" />
       </list>
     </option>
   </component>
@@ -143,6 +148,13 @@
               <item name="LearnFirstJavaAcademITSchool" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Lecture" type="462c0819:PsiDirectoryNode" />
+              <item name="Three" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaLearnAcademITSchool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnFirstJavaAcademITSchool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lecture" type="462c0819:PsiDirectoryNode" />
               <item name="Two" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -169,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Apartments">
+  <component name="RunManager" selected="Application.LeapYear">
     <configuration name="Apartments" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -208,14 +220,14 @@
       <module name="LearnFirstJavaAcademITSchool" />
       <envs />
     </configuration>
-    <configuration name="MinMax" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="LeapYear" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="Lecture.Three.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Lecture.Three.MinMax" />
+      <option name="MAIN_CLASS_NAME" value="Lecture.Three.LeapYear" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -227,14 +239,14 @@
       <module name="LearnFirstJavaAcademITSchool" />
       <envs />
     </configuration>
-    <configuration name="RadiusOfCircleByArea" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MinMax" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Lecture.Two.*" />
+          <option name="PATTERN" value="Lecture.Three.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Lecture.Two.RadiusOfCircleByArea" />
+      <option name="MAIN_CLASS_NAME" value="Lecture.Three.MinMax" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -347,19 +359,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.RadiusOfCircleByArea" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Conversations" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MinMax" />
-      <item index="3" class="java.lang.String" itemvalue="Application.WorkingWithThePassword" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Apartments" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Conversations" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MinMax" />
+      <item index="2" class="java.lang.String" itemvalue="Application.WorkingWithThePassword" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Apartments" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LeapYear" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Apartments" />
-        <item index="1" class="java.lang.String" itemvalue="Application.WorkingWithThePassword" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MinMax" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Conversations" />
-        <item index="4" class="java.lang.String" itemvalue="Application.RadiusOfCircleByArea" />
+        <item index="0" class="java.lang.String" itemvalue="Application.LeapYear" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Apartments" />
+        <item index="2" class="java.lang.String" itemvalue="Application.WorkingWithThePassword" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MinMax" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Conversations" />
       </list>
     </recent_temporary>
   </component>
@@ -411,11 +423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518023775868</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Доделал задачу про апартаменты. Остался из 3-й лекции расчёт високосного года.">
+      <created>1518196013554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1518196013554</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27673000" />
+    <option name="totallyTimeSpent" value="28570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -485,7 +504,8 @@
     <MESSAGE value="Поправил класс RadiusOfCircleByArea по обратной связи от Анны. Получено подтверждение о том, что задача засчитана." />
     <MESSAGE value="Актуализировал .gitignor" />
     <MESSAGE value="оработал ДЗ, без задачи на расчёт високосного года" />
-    <option name="LAST_COMMIT_MESSAGE" value="оработал ДЗ, без задачи на расчёт високосного года" />
+    <MESSAGE value="Доделал задачу про апартаменты. Остался из 3-й лекции расчёт високосного года." />
+    <option name="LAST_COMMIT_MESSAGE" value="Доделал задачу про апартаменты. Остался из 3-й лекции расчёт високосного года." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -759,14 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lecture/Three/LeapYear.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lecture/Three/Conversations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -818,7 +830,15 @@
     <entry file="file://$PROJECT_DIR$/src/Lecture/CourseObjectives/Apartments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lecture/Three/LeapYear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
           <folding />
         </state>
       </provider>
