@@ -4,49 +4,50 @@ import java.util.Scanner;
 
 public class Apartments {
     public static void main(String[] args) throws java.lang.Exception {
-        int wsegoKvartirWdome, wsegoPodesdov, wsegoEtagey, iskomajaKvartira, kvartirWpodesde, kvartirNaEtage, podesd, etag, raspologenie;
+        int countOfApartments, totalEntraces, totalFloors, inputedApartment, apartmentsInEntrace, apartmentsOnFloor, entrace, floor;
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите количество подъездов в многоквартирном доме:");
-        wsegoPodesdov = scanner.nextInt();
+        totalEntraces = scanner.nextInt();
 
         System.out.println("Введите количество этажей в многоквартирном доме:");
-        wsegoEtagey = scanner.nextInt();
+        totalFloors = scanner.nextInt();
 
         System.out.println("Введите номер искомой квартиры в многоквартирном доме:");
-        iskomajaKvartira = scanner.nextInt();
+        inputedApartment = scanner.nextInt();
 
-        raspologenie = (iskomajaKvartira - 1) % 4;
-        wsegoKvartirWdome = wsegoPodesdov * wsegoEtagey * 4;
-
-        if (iskomajaKvartira <= 0 || iskomajaKvartira > wsegoKvartirWdome) {
+        countOfApartments = totalEntraces * totalFloors * 4;
+        if (inputedApartment <= 0 || inputedApartment > countOfApartments) {
             System.out.println("Квартиры с введённым вами номером в этом доме нет!");
-        } else {
-            kvartirWpodesde = wsegoKvartirWdome / wsegoPodesdov;
-            kvartirNaEtage = wsegoKvartirWdome / wsegoPodesdov / wsegoEtagey;
-            podesd = iskomajaKvartira / kvartirWpodesde;
-            if (iskomajaKvartira % kvartirWpodesde != 0) {
-                podesd++;
-            }
-            if (iskomajaKvartira % kvartirWpodesde == 0) {
-                etag = wsegoEtagey;
-            } else {
-                etag = (iskomajaKvartira % kvartirWpodesde) / kvartirNaEtage;
-                if (iskomajaKvartira % kvartirNaEtage != 0) {
-                    etag++;
-                }
-            }
-            System.out.printf("Искомая квартира находится в подъезде №%d на %d-м этаже,", podesd, etag);
+            return;
         }
+
+        apartmentsInEntrace = countOfApartments / totalEntraces;
+        apartmentsOnFloor = countOfApartments / totalEntraces / totalFloors;
+        entrace = inputedApartment / apartmentsInEntrace;
+        if (inputedApartment % apartmentsInEntrace != 0) {
+            entrace++;
+        }
+        if (inputedApartment % apartmentsInEntrace == 0) {
+            floor = totalFloors;
+        } else {
+            floor = (inputedApartment % apartmentsInEntrace) / apartmentsOnFloor;
+            if (inputedApartment % apartmentsOnFloor != 0) {
+                floor++;
+            }
+        }
+        int raspologenie = (inputedApartment - 1) % 4;
+        String raschifrovkaRaspologenija;
         if (raspologenie == 0) {
-            System.out.println(" ближняя слева.");
+            raschifrovkaRaspologenija = "ближняя слева.";
         } else if (raspologenie == 1) {
-            System.out.println(" дальняя слева.");
+            raschifrovkaRaspologenija = "дальняя слева.";
         } else if (raspologenie == 2) {
-            System.out.println(" дальняя справа.");
+            raschifrovkaRaspologenija = "дальняя справа.";
         } else {
-            System.out.println(" ближняя справа.");
+            raschifrovkaRaspologenija = "ближняя справа.";
         }
+        System.out.printf("Искомая квартира находится в подъезде №%d на %d-м этаже, %s", entrace, floor, raschifrovkaRaspologenija);
     }
 }
