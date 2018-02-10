@@ -37,17 +37,17 @@ public class Apartments {
                 floor++;
             }
         }
-        int raspologenie = (inputedApartment - 1) % 4;
-        String raschifrovkaRaspologenija;
-        if (raspologenie == 0) {
-            raschifrovkaRaspologenija = "ближняя слева.";
-        } else if (raspologenie == 1) {
-            raschifrovkaRaspologenija = "дальняя слева.";
-        } else if (raspologenie == 2) {
-            raschifrovkaRaspologenija = "дальняя справа.";
+        int location = (inputedApartment - 1) % 4;
+        String decodingLocation;
+        if (location == 0) {
+            decodingLocation = "ближняя слева.";
+        } else if (location == 1) {
+            decodingLocation = "дальняя слева.";
+        } else if (location == 2) {
+            decodingLocation = "дальняя справа.";
         } else {
-            raschifrovkaRaspologenija = "ближняя справа.";
+            decodingLocation = "ближняя справа.";
         }
-        System.out.printf("Искомая квартира находится в подъезде №%d на %d-м этаже, %s", entrace, floor, raschifrovkaRaspologenija);
+        System.out.printf("Искомая квартира находится в подъезде №%d на %d-м этаже, %s", entrace, floor, decodingLocation);
     }
 }
