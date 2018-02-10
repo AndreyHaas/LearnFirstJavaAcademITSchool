@@ -4,40 +4,41 @@ import java.util.Scanner;
 
 public class Apartments {
     public static void main(String[] args) throws java.lang.Exception {
-        int countOfApartments, totalEntraces, totalFloors, inputedApartment, apartmentsInEntrace, apartmentsOnFloor, entrace, floor;
+        int countOfApartments, totalEntrances, totalFloors, enteredApartmentNumber, apartmentsInEntrance, apartmentsOnFloor, entrance, floor;
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите количество подъездов в многоквартирном доме:");
-        totalEntraces = scanner.nextInt();
+        totalEntrances = scanner.nextInt();
 
         System.out.println("Введите количество этажей в многоквартирном доме:");
         totalFloors = scanner.nextInt();
 
         System.out.println("Введите номер искомой квартиры в многоквартирном доме:");
-        inputedApartment = scanner.nextInt();
+        enteredApartmentNumber = scanner.nextInt();
 
-        countOfApartments = totalEntraces * totalFloors * 4;
-        if (inputedApartment <= 0 || inputedApartment > countOfApartments) {
+        countOfApartments = totalEntrances * totalFloors * 4;
+        if (enteredApartmentNumber <= 0 || enteredApartmentNumber > countOfApartments) {
             System.out.println("Квартиры с введённым вами номером в этом доме нет!");
             return;
         }
 
-        apartmentsInEntrace = countOfApartments / totalEntraces;
-        apartmentsOnFloor = countOfApartments / totalEntraces / totalFloors;
-        entrace = inputedApartment / apartmentsInEntrace;
-        if (inputedApartment % apartmentsInEntrace != 0) {
-            entrace++;
+        apartmentsInEntrance = countOfApartments / totalEntrances;
+        apartmentsOnFloor = countOfApartments / totalEntrances / totalFloors;
+        entrance = enteredApartmentNumber / apartmentsInEntrance;
+        if (enteredApartmentNumber % apartmentsInEntrance != 0) {
+            entrance++;
         }
-        if (inputedApartment % apartmentsInEntrace == 0) {
+        if (enteredApartmentNumber % apartmentsInEntrance == 0) {
             floor = totalFloors;
         } else {
-            floor = (inputedApartment % apartmentsInEntrace) / apartmentsOnFloor;
-            if (inputedApartment % apartmentsOnFloor != 0) {
+            floor = (enteredApartmentNumber % apartmentsInEntrance) / apartmentsOnFloor;
+            if (enteredApartmentNumber % apartmentsOnFloor != 0) {
                 floor++;
             }
         }
-        int location = (inputedApartment - 1) % 4;
+
+        int location = (enteredApartmentNumber - 1) % 4;
         String decodingLocation;
         if (location == 0) {
             decodingLocation = "ближняя слева.";
@@ -48,6 +49,6 @@ public class Apartments {
         } else {
             decodingLocation = "ближняя справа.";
         }
-        System.out.printf("Искомая квартира находится в подъезде №%d на %d-м этаже, %s", entrace, floor, decodingLocation);
+        System.out.printf("Искомая квартира находится в подъезде №%d на %d-м этаже, %s", entrance, floor, decodingLocation);
     }
 }
