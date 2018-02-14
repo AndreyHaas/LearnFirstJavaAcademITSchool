@@ -3,8 +3,10 @@ package Lecture.CourseObjectives;
 import java.util.Scanner;
 
 public class Apartments {
-    public static void main(String[] args) throws java.lang.Exception {
-        int countOfApartments, totalEntrances, totalFloors, enteredApartmentNumber, apartmentsInEntrance, apartmentsOnFloor, entrance, floor;
+    public static void main(String[] args) {
+        
+        int countOfApartments, totalEntrances, totalFloors, enteredApartmentNumber, apartmentsInEntrance, apartmentsOnFloor, entrance, floor, location;
+        String decodingLocation;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -17,15 +19,17 @@ public class Apartments {
         System.out.println("Введите номер искомой квартиры в многоквартирном доме:");
         enteredApartmentNumber = scanner.nextInt();
 
-        countOfApartments = totalEntrances * totalFloors * 4;
+        apartmentsOnFloor = 4;
+
+        countOfApartments = totalEntrances * totalFloors * apartmentsOnFloor;
         if (enteredApartmentNumber <= 0 || enteredApartmentNumber > countOfApartments) {
             System.out.println("Квартиры с введённым вами номером в этом доме нет!");
             return;
         }
 
         apartmentsInEntrance = countOfApartments / totalEntrances;
-        apartmentsOnFloor = countOfApartments / totalEntrances / totalFloors;
         entrance = enteredApartmentNumber / apartmentsInEntrance;
+
         if (enteredApartmentNumber % apartmentsInEntrance != 0) {
             entrance++;
         }
@@ -38,8 +42,8 @@ public class Apartments {
             }
         }
 
-        int location = (enteredApartmentNumber - 1) % 4;
-        String decodingLocation;
+        location = (enteredApartmentNumber - 1) % apartmentsOnFloor;
+
         if (location == 0) {
             decodingLocation = "ближняя слева.";
         } else if (location == 1) {

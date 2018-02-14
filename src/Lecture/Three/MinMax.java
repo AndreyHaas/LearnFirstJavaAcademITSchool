@@ -8,17 +8,20 @@ public class MinMax {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int digit1 = Integer.parseInt(reader.readLine());
-        int digit2 = Integer.parseInt(reader.readLine());
+        int number1 = Integer.parseInt(reader.readLine());
+        int number2 = Integer.parseInt(reader.readLine());
 
-        if (digit1 > digit2) {
-            System.out.println("Ветвление (if-else):" + System.lineSeparator() + "Наибольшее значение в введённой паре цифр: " + digit1 + ", соответственно " + digit2 + " - наименьшее." + System.lineSeparator());
+        if (number1 > number2) {
+            System.out.println("Ветвление (if-else):");
+            System.out.println("Наибольшее значение в введённой паре цифр: " + number1 + " а, "+ number2 + " - наименьшее.");
         } else {
-            System.out.println("Ветвление (if-else):" + System.lineSeparator() + "Наибольшее значение в введённой паре цифр: " + digit2 + ", соответственно " + digit1 + " - наименьшее." + System.lineSeparator());
+            System.out.println("Ветвление (if-else):");
+            System.out.println("Наибольшее значение в введённой паре цифр: " + number2 + " а, "+ number1 + " - наименьшее.");
         }
-        int max = (digit1 > digit2) ? digit1 : digit2;
-        int min = (digit1 < digit2) ? digit1 : digit2;
+        int max = (number1 > number2) ? number1 : number2;
+        int min = (number1 < number2) ? number1 : number2;
 
-        System.out.println("С применением тернарного оператора:" + System.lineSeparator() + "Максимальное значение: " + max + ", минимальное значение в связке: " + min);
+        System.out.println("С применением тернарного оператора:");
+        System.out.println("Максимальное значение: " + max + ", минимальное значение в связке: " + min);
     }
 }
