@@ -20,27 +20,27 @@ public class Apartments {
         enteredApartmentNumber = scanner.nextInt();
 
         apartmentsOnFloor = 4;
-
         countOfApartments = totalEntrances * totalFloors * apartmentsOnFloor;
+
         if (enteredApartmentNumber <= 0 || enteredApartmentNumber > countOfApartments) {
             System.out.println("Квартиры с введённым вами номером в этом доме нет!");
             return;
         }
-
-        apartmentsInEntrance = countOfApartments / totalEntrances;
-        entrance = enteredApartmentNumber / apartmentsInEntrance;
-
-        if (enteredApartmentNumber % apartmentsInEntrance != 0) {
-            entrance++;
-        }
-        if (enteredApartmentNumber % apartmentsInEntrance == 0) {
-            floor = totalFloors;
-        } else {
-            floor = (enteredApartmentNumber % apartmentsInEntrance) / apartmentsOnFloor;
-            if (enteredApartmentNumber % apartmentsOnFloor != 0) {
-                floor++;
-            }
-        }
+//TODO переделать алгоритм расчёта расположения искомой квартиры
+//        apartmentsInEntrance = countOfApartments / totalEntrances;
+//        entrance = enteredApartmentNumber / apartmentsInEntrance;
+//
+//        if (enteredApartmentNumber % apartmentsInEntrance != 0) {
+//            entrance++;
+//        }
+//        if (enteredApartmentNumber % apartmentsInEntrance == 0) {
+//            floor = totalFloors;
+//        } else {
+//            floor = (enteredApartmentNumber % apartmentsInEntrance) / apartmentsOnFloor;
+//            if (enteredApartmentNumber % apartmentsOnFloor != 0) {
+//                floor++;
+//            }
+//        }
 
         location = (enteredApartmentNumber - 1) % apartmentsOnFloor;
 
