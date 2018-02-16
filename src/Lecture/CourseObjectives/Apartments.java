@@ -4,8 +4,15 @@ import java.util.Scanner;
 
 public class Apartments {
     public static void main(String[] args) {
-        
-        int countOfApartments, totalEntrances, totalFloors, enteredApartmentNumber, apartmentsInEntrance, apartmentsOnFloor, entrance, floor, location;
+
+        int countOfApartments;
+        int totalEntrances;
+        int totalFloors;
+        int enteredApartmentNumber;
+        int apartmentsOnFloor;
+        int entrance;
+        int floor;
+        int location;
         String decodingLocation;
 
         Scanner scanner = new Scanner(System.in);
@@ -26,10 +33,8 @@ public class Apartments {
             System.out.println("Квартиры с введённым вами номером в этом доме нет!");
             return;
         }
+
 //TODO переделать алгоритм расчёта расположения искомой квартиры
-//        apartmentsInEntrance = countOfApartments / totalEntrances;
-//        entrance = enteredApartmentNumber / apartmentsInEntrance;
-//
 //        if (enteredApartmentNumber % apartmentsInEntrance != 0) {
 //            entrance++;
 //        }
@@ -41,9 +46,11 @@ public class Apartments {
 //                floor++;
 //            }
 //        }
+//
+        entrance = (enteredApartmentNumber - 1) / (totalFloors * apartmentsOnFloor) + 1;
+        floor = ((enteredApartmentNumber - 1) % (totalFloors * apartmentsOnFloor)) / apartmentsOnFloor + 1;
 
         location = (enteredApartmentNumber - 1) % apartmentsOnFloor;
-
         if (location == 0) {
             decodingLocation = "ближняя слева.";
         } else if (location == 1) {
