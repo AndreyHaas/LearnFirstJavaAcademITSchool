@@ -26,7 +26,7 @@ public class TheAge {
 //            ageDescription = "лет.";
 //        }
         int ageLastNumber = age % 10;
-        boolean isExclusion = (age % 100 >= 11) && (age % 100 <= 14);
+        boolean Exclusion = (age % 100 >= 11) && (age % 100 <= 14);
         String old = "";
 
         if (age < 1) {
@@ -44,7 +44,7 @@ public class TheAge {
         } else if (ageLastNumber >= 2 && ageLastNumber <= 4) {
             old = "года";
         }
-        if (isExclusion) {
+        if (Exclusion) {
             old = "лет";
         }
 
