@@ -26,19 +26,6 @@ public class Apartments {
             return;
         }
 
-//TODO переделать алгоритм расчёта расположения искомой квартиры
-//        if (enteredApartmentNumber % apartmentsInEntrance != 0) {
-//            entrance++;
-//        }
-//        if (enteredApartmentNumber % apartmentsInEntrance == 0) {
-//            floor = totalFloors;
-//        } else {
-//            floor = (enteredApartmentNumber % apartmentsInEntrance) / apartmentsOnFloor;
-//            if (enteredApartmentNumber % apartmentsOnFloor != 0) {
-//                floor++;
-//            }
-//        }
-//
         int entrance = (enteredApartmentNumber - 1) / (totalFloors * apartmentsOnFloor) + 1;
         int floor = ((enteredApartmentNumber - 1) % (totalFloors * apartmentsOnFloor)) / apartmentsOnFloor + 1;
 
