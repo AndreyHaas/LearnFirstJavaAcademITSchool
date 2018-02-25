@@ -8,6 +8,7 @@ public class SwitchCase {
 
         System.out.println("Введите команду: ");
         String value = command.nextLine();
+
         switch (value) {
             case "print":
                 System.out.println("Введите строку: ");
