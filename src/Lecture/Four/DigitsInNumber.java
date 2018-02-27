@@ -13,6 +13,9 @@ public class DigitsInNumber {
             a = scanner.nextInt();
             while (a != 0) {
                 count = count + a % 10;
+                if (count % 1 == 0) {
+                    odd += a;
+                }
                 a /= 10;
             }
             System.out.println("Сумма цифр введенного числа равна " + count);
