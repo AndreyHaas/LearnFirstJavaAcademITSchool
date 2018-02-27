@@ -35,7 +35,7 @@ public class AreaOfTriangle {
         double p = (a + b + c) / 2;
 
         double area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-        if (area > 0) {
+        if (area > 0.000000000000000000000000000001) {
             System.out.println("Площадь треугольника равна " + area);
         } else {
             System.out.println("Заданные вершины лежат на одной прямой!!!"

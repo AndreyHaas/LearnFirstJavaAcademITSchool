@@ -6,21 +6,32 @@ public class DigitsInNumber {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int a, count = 0;
+        int enteredNumber, sum = 0;
+        int digit;
         int odd = 0;
+        int maxDigit=0;
         if (scanner.hasNextInt()) {
             System.out.println("Введите целое число: ");
-            a = scanner.nextInt();
-            while (a != 0) {
-                count = count + a % 10;
-                if (count % 1 == 0) {
-                    odd += a;
+            enteredNumber = scanner.nextInt();
+
+            while (enteredNumber != 0) {
+                digit = enteredNumber % 10;
+                if (digit > maxDigit) {
+                    maxDigit = digit ;
                 }
-                a /= 10;
+                if (digit % 2 != 0) {
+                    odd += digit;
+                }
+                sum = sum + enteredNumber % 10;
+                enteredNumber /= 10;
             }
-            System.out.println("Сумма цифр введенного числа равна " + count);
+            System.out.println("Сумма цифр введенного числа равна " + sum);
+            System.out.println("Сумма нечетных цифр в числе составит: " + odd);
+            System.out.println("Максимальная цифра в числе: " + maxDigit);
         } else {
             System.out.println("Ошибка ввода!!! Вами введено не число!!!");
+            {
+            }
         }
     }
 }

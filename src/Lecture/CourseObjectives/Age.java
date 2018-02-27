@@ -14,8 +14,6 @@ public class Age {
         System.out.println("Введите ваш возраст в диапазоне от 1 до 112: ");
         int age = scanner.nextInt();
 
-        int ageLastNumber = age % 10;
-
         if (age < 1) {
             System.out.println("Вы слишком малы.");
             return;
@@ -23,10 +21,9 @@ public class Age {
             System.out.println("Вы слишком стары.");
             return;
         }
-
         boolean isExclusion = age % 100 >= 11 && age % 100 <= 14;
         String old = "";
-
+        int ageLastNumber = age % 10;
         if (isExclusion || ageLastNumber == 0 || ageLastNumber >= 5 && ageLastNumber <= 9) {
             old = "лет";
         } else if (ageLastNumber == 1) {
@@ -34,7 +31,6 @@ public class Age {
         } else if (ageLastNumber >= 2 && ageLastNumber <= 4) {
             old = "года";
         }
-
         System.out.println("Вам " + age + " " + old);
     }
 }
