@@ -8,9 +8,12 @@ public class DoWhileHome {
         int count = 0;
 
         do {
-            sum += count;
+            sum += beginNumber;
             count++;
         } while (count <= stopNumber);
-        System.out.println("average = " + sum / count);
+
+        int average = sum / count;
+
+        System.out.println("average = " + average);
     }
 }

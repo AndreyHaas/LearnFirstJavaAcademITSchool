@@ -2,9 +2,11 @@ package Lecture.Four;
 
 public class PrintingNumbers {
     public static void main(String[] args) {
-        int beginNumber = 3;
+        int beginNumber = 0;
+        int numberWithDelta = 3;
         int sum = 0;
         int count = 0;
+        beginNumber += numberWithDelta;
         while (beginNumber <= 21) {
             if (beginNumber % 2 == 0) {
                 sum += beginNumber;
@@ -12,8 +14,8 @@ public class PrintingNumbers {
             }
             beginNumber++;
         }
-        System.out.printf("sum/count = %d/%d", sum, count);
-        System.out.println();
-        System.out.printf("average = %d", sum / count);
+        int average = sum / count;
+        System.out.printf("sum/count = %d/%d%n", sum, count);
+        System.out.printf("average = %d", average);
     }
 }

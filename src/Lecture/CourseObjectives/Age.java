@@ -22,13 +22,13 @@ public class Age {
             return;
         }
         boolean isExclusion = age % 100 >= 11 && age % 100 <= 14;
-        String old = "";
+        String old;
         int ageLastNumber = age % 10;
-        if (isExclusion || ageLastNumber == 0 || ageLastNumber >= 5 && ageLastNumber <= 9) {
+        if ((isExclusion || ageLastNumber == 0 || ageLastNumber >= 5) && ageLastNumber <= 9) {
             old = "лет";
         } else if (ageLastNumber == 1) {
             old = "год";
-        } else if (ageLastNumber >= 2 && ageLastNumber <= 4) {
+        } else {
             old = "года";
         }
         System.out.println("Вам " + age + " " + old);
