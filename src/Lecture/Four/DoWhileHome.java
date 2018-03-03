@@ -2,17 +2,20 @@ package Lecture.Four;
 
 public class DoWhileHome {
     public static void main(String[] args) {
-        int beginNumber = 1;
-        int stopNumber = 20;
+        int beginNumber = 3;
+        int stopNumber = 17;
         int sum = 0;
         int count = 0;
+        int i = beginNumber;
 
-        do {
-            sum += beginNumber;
-            count++;
-        } while (count <= stopNumber);
+        while (i <= stopNumber) {
+            sum += i;
+            ++i;
+            ++count;
+        }
 
-        int average = sum / count;
+
+        double average = (double) sum / count;
 
         System.out.println("average = " + average);
     }

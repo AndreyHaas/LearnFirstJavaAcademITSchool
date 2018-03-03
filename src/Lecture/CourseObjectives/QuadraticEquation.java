@@ -20,9 +20,10 @@ public class QuadraticEquation {
         int c = scanner.nextInt();
 
         double d = Math.pow(b, 2) - 4 * a * c;
-        if (d < 0) {
+        double epsilon = 1.0e-25;
+        if (d < epsilon) {
             System.out.println("Нет решения для уравнения!");
-        } else if (d == 0) {
+        } else if (d == epsilon) {
             double x1 = -b / 2 * a;
             System.out.println("Уравнение имеет один корень:");
             System.out.println("x1 = " + x1);

@@ -7,20 +7,20 @@ public class Fibonacci {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите количество итераций для расчёта числа Фибоначчи:");
-        int fibonacciNumbers = scanner.nextInt();
+        double fibonacciNumbers = scanner.nextDouble();
 
-        int a = 0;
-        int b = 0;
-        a += 1;
+        double a = 0;
+        double b = 0;
+        double count;
+        System.out.print("Ряд Фибоначчи равен: " + a);
         b += 1;
-        System.out.print("Ряд Фибоначчи равен: " + a + " " + b);
-
-        int count, i = 2;
+        System.out.print(", " + b);
+        int i = 0;
         while (i < fibonacciNumbers) {
             count = a + b;
             a = b;
             b = count;
-            System.out.print(" " + count);
+            System.out.print(", " + count);
             i++;
         }
     }
