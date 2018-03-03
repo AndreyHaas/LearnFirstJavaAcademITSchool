@@ -4,7 +4,7 @@ package Lecture.CourseObjectives;
  * Created by Andreas Haas on 3/4/2018.
  */
 public class BankDeposit {
-    public static double depositCalculation(int month, double interestRate, double depositValue) {
+    private static double depositCalculation(int month, double interestRate, double depositValue) {
         double profitPerMonth;
         double totalProfit = 0;
         int monthInYear = 12;
